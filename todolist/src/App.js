@@ -5,6 +5,7 @@ import Item from './Components/List Item/index.js';
 import initialList from './Components/List data/data.js';
 
 
+
 function App() {
   const [list, setList] = useState(initialList);
   const [text, setText] = useState(' ');
@@ -30,14 +31,14 @@ function App() {
 
   return (
     <div className="App">
-    <Input onChange={handleChange} value={text}></Input>
+    <h1>To Do List</h1>
+    <Input onChange={handleChange} value={text} className= 'button'></Input>
     <button type="button" onClick={handleAdd}>
           Add
         </button>
-    <button type="button" onClick={deleteAdd}>Delete</button>
     <ul>
       {list.map(function(item){
-        return <Item key={item.id} text={item.text} />
+        return <Item key={item.id} text={item.text} onClick={deleteAdd}/>;
       })}
     </ul>
     </div>
