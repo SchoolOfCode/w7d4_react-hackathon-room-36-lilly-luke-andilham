@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
     <h1>To Do List</h1>
-    <Input onChange={handleChange} value={text} className= 'button'></Input>
+    <Input onChange={handleChange} value={text}></Input>
     <button type="button" onClick={handleAdd}>
           Add
         </button>
