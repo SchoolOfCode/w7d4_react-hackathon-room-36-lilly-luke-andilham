@@ -26,7 +26,14 @@ function App() {
 		setList(deleteList);
 		console.log(deleteList);
 	}
-
+/*value prop in input component not actually needed is saying give the input field a value of the text state but this is being captured by the handleChange function
+	which will get what is typed and change the text state as needed, so is basically duplicating something already handled and will not do anything 
+	as value is a placeholder so what you type in value will actually appear in the field box, so in the actual component
+	file if you put value="hello" this will be what will appear in the input field 
+	and you cannot remove it as saying the value of the input field should be the string "hello" not what you type, 
+	so as you type in the input field the state is chanegd by event handler and also placeholder
+	text being changed to this too but wil obvs look like same entry in the input field
+	so this prop can be removed and will not affect how app runs */
 	return (
 		<div className="App">
 			<h1>To Do List</h1>
